@@ -141,8 +141,8 @@ adxl_oku(0x32);
 			z=(data[5] << 8) | (data[4]);
 		
 		xg=(float)x*0.0078;
-		yg=(float)x*0.0078;
-		zg=(float)x*0.0078;
+		yg=(float)y*0.0078;
+		zg=(float)z*0.0078;
 		
 		sprintf(buffer,"xg: %f yg: %f zg: %f \r\n", xg,yg,zg);
 		while(HAL_UART_GetState(&huart2)!= HAL_UART_STATE_READY);
